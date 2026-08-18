@@ -12,7 +12,8 @@ print(frame.shape)
 print(f"shape:{frame.shape}")
 
 # 처리할 이미지의 가로 크기
-target_width = 1000
+TEST_SIZE = 1000
+target_width = TEST_SIZE
 
 height = int(
     frame.shape[0] * (target_width / frame.shape[1])
@@ -23,6 +24,11 @@ resized_frame = cv2.resize(
 )
 
 print(f"resized shape:{resized_frame.shape}")
+
+output_path = "samples/img/state_test0_resized.jpg"
+cv2.imwrite(output_path, resized_frame)
+
+print(f"이미지 저장 완료: {output_path}")   
 
 # cv2.imshow("AI-Go Sample", frame)
 # cv2.waitKey(0)
