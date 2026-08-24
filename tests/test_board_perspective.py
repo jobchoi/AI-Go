@@ -1,7 +1,9 @@
 import cv2
 import numpy as np
 
-image_path = "samples/img/state_test_board_roi.jpg"
+# image_path = "samples/img/state_test_board_roi.jpg"
+image_path = "samples/img/state_test_empty0.jpg"
+
 
 board = cv2.imread(image_path)
 
