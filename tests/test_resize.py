@@ -2,7 +2,7 @@ import cv2
 
 TEST_SIZE = 1000
 
-image_path = "samples/img/state_test0.jpg"
+image_path = "samples/img/state_test_empty1.jpg"
 
 frame = cv2.imread(image_path)
 
@@ -25,14 +25,9 @@ resized_frame = cv2.resize(
 
 print(f"resize shape: {resized_frame.shape}")
 
-# Board ROI
-x1 = 200
-y1 = 27
-x2 = 705
-y2 = 430
+output_path = "samples/img/state_test_empty1_resized.jpg"
 
-board = resized_frame[y1:y2, x1:x2]
-print(f"Board shape: {board.shape}")    
-output_path = "samples/img/state_test_board_roi.jpg"
-cv2.imwrite(output_path, board)
-print(f"Board ROI saved to {output_path}")
+if not cv2.imwrite(output_path, resized_frame):
+    raise RuntimeError("resize 이미지 저장 실패")
+
+print(f"resize image saved to {output_path}")

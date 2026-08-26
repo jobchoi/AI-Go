@@ -1,6 +1,6 @@
 import cv2
 
-image_path = "samples/img/state_test0.jpg"
+image_path = "samples/img/state_test_empty1.jpg"
 
 frame = cv2.imread(image_path)
 
