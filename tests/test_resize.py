@@ -2,7 +2,9 @@ import cv2
 
 TEST_SIZE = 1000
 
-image_path = "samples/img/state_test_empty1.jpg"
+# TEST - Master img used for testing
+image_path = "samples/img/state_empty_M.jpg"
+# image_path = "samples/img/state_test_empty1.jpg"
 
 frame = cv2.imread(image_path)
 

@@ -12,12 +12,19 @@ print("ROI 이미지 로드 성공")
 print(f"board shape: {board.shape}")
 
 # ROI 이미지 기준 바둑판 네 꼭짓점
-src_points = np.float32([
-    [40, 21],       # top-left
-    [897, 37],      # top-right
-    [900, 860],    # bottom-right
-    [68, 848]       # bottom-left
-])
+# src_points = np.float32([
+#     [40, 21],       # top-left
+#     [897, 37],      # top-right
+#     [900, 860],    # bottom-right
+#     [75, 848]       # bottom-left
+# ])
+# ROI 이미지 기준 바둑판 네 꼭짓점 - Master img 기준 좌표
+src_points = np.array([
+    [20, 0],       # top-left
+    [372, 7],      # top-right
+    [370, 340],    # bottom-right
+    [20, 342]      # bottom-left
+], dtype=np.float32)
 
 BOARD_SIZE = 800
 

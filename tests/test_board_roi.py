@@ -12,10 +12,16 @@ print(f"image shape: {frame.shape}")
 
 # Board ROI
 # resize 이미지 기준 좌표
-x1 = 0
-y1 = 490
-x2 = 920
-y2 = 1400
+# x1 = 0
+# y1 = 490
+# x2 = 920
+# y2 = 1400
+
+# Master img points
+x1 = 200
+y1 = 60
+x2 = 600
+y2 = 430
 
 board = frame[y1:y2, x1:x2]
 
