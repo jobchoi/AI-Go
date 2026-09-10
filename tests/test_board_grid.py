@@ -139,6 +139,24 @@ for i, line in enumerate(vertical_lines, start=1):
     x1, y1, x2, y2 = line
     print(f"  V{i:02d}: ({x1}, {y1}) -> ({x2}, {y2})")
 
+print("[GRID][SEGMENT LENGTH]")
+
+for i, line in enumerate(horizontal_lines, start=1):
+    x1, y1, x2, y2 = line
+
+    length = np.hypot(x2 - x1, y2 - y1)
+
+    print(f"  H{i:02d}: {length:.1f}px")
+
+for i, line in enumerate(vertical_lines, start=1):
+    x1, y1, x2, y2 = line
+
+    length = np.hypot(x2 - x1, y2 - y1)
+
+    print(f"  V{i:02d}: {length:.1f}px")
+
+
+
 # Save the image with detected lines
 line_output_path = "samples/img/state_test_board_grid_lines.jpg"
 
